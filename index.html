@@ -1,81 +1,61 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Cybersecurity Awareness</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cyber Awareness</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 
   <style>
-    body {
+    html, body {
       margin: 0;
-      background: black;
-      color: red;
-      font-family: Arial, sans-serif;
-      overflow: hidden;
-    }
-
-    .gif-bg {
-      width: 100vw;
-      height: 100vh;
-      object-fit: cover;
-      position: fixed;
-      top: 0;
-      left: 0;
-      z-index: 1;
-    }
-
-    .warning {
-      position: fixed;
-      z-index: 2;
+      padding: 0;
       width: 100%;
-      top: 35%;
-      text-align: center;
-      font-size: 40px;
-      font-weight: bold;
-      text-shadow: 0 0 15px red;
-      animation: blink 0.6s infinite;
+      height: 100%;
+      background: black;
+      overflow: hidden;
+      font-family: Arial, sans-serif;
+    }
+
+    .gif {
+      width: 100vw;
+      height: 100dvh;
+      object-fit: contain;
+      background: black;
+      display: block;
     }
 
     .message {
       display: none;
-      position: fixed;
-      z-index: 3;
+      width: 100vw;
+      height: 100dvh;
       background: black;
       color: white;
-      width: 100vw;
-      height: 100vh;
       text-align: center;
-      padding-top: 30vh;
-      font-size: 26px;
-      line-height: 1.6;
+      padding: 28vh 24px 0;
+      box-sizing: border-box;
+      font-size: 24px;
+      line-height: 1.5;
     }
 
-    @keyframes blink {
-      50% {
-        opacity: 0.2;
-      }
+    .message strong {
+      font-size: 28px;
     }
   </style>
 </head>
 
 <body>
 
-  <img src="hack.gif" class="gif-bg">
-
-  <div class="warning">
-    ⚠ YOUR DEVICE WAS HACKED ⚠
-  </div>
+  <img src="hack.gif" class="gif" id="gif">
 
   <div class="message" id="message">
-    Relax. <br><br>
-    Nothing was hacked.<br>
+    <strong>Relax.</strong><br><br>
+    nothing was hacked !!<br>
   </div>
 
   <script>
     setTimeout(function() {
-      document.querySelector(".gif-bg").style.display = "none";
-      document.querySelector(".warning").style.display = "none";
+      document.getElementById("gif").style.display = "none";
       document.getElementById("message").style.display = "block";
-    }, 5000);
+    }, 6000);
   </script>
 
 </body>
